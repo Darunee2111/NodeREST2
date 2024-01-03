@@ -21,7 +21,6 @@ let books = [
         title : 'book 3',
         author : 'Auther 3',
     }
-    
 ];
 //
 
