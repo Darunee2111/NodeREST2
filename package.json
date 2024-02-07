@@ -16,7 +16,6 @@
     "prettier": "^3.1.1"
   },
   "dependencies": {
-    "-": "^0.0.1",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "sequelize": "^6.36.0",
