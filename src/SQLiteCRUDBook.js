@@ -31,12 +31,9 @@ sequelize.sync();
 
 app.get("/books", (req, res) =>{
     Book.findAll().then(books => {
-        res.json(books);
-    }).catch(err => {
-        res.stats(500).send(err);
+        res.status(500).send(err);
     });
 });
-
 
 //route to get a book by id
 app.get("/books/:id", (req, res)=> {
@@ -95,5 +92,5 @@ app.delete("/books/:id", (req, res) => {
 });
 
 //start the server
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 app.listen(port, () => console.log(`Listening on port http://localhost:${port}`));
