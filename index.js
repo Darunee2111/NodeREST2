@@ -7,7 +7,8 @@ app.use(express.json());
 const sequelize = new Sequelize("database","username","password",{
     host: "localhost",
     dialect: "sqlite",
-    Storage: "./Database/SQLBooks.sqlite"
+   // Storage: "./Database/SQLBooks.sqlite"
+   Storage: "./a/SQLBooks.sqlite"
 
 });
 
@@ -53,7 +54,7 @@ app.get("/books/:id", (req, res)=> {
 
 //route to create a new book ไปดูบรรทัด60กว่า
 app.post("/books",(req, res) => {
-    Book.create(req.body).then(book =>{
+    Book.creat(req.body).then(book =>{
         res.send(book);
     }).catch(err => {
         res.status(500).send(err);
